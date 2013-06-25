@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/jackson-databind-2.2.2.jar')
+    compile files('libs/volley.jar')
+    compile group:'com.squareup.okhttp', name:'okhttp', version:'1.0.2'
+    compile group:'com.fasterxml.jackson.core', name:'jackson-core', version:'2.2.2'
+    compile group:'com.fasterxml.jackson.core', name:'jackson-annotations', version:'2.2.2'
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 16
+    }
+}

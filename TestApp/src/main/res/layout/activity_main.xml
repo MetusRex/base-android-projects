@@ -1,0 +1,47 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="#ff575454">
+
+        <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="@dimen/title_bar_height"
+                android:layout_height="@dimen/title_bar_height"
+                android:padding="@dimen/list_item_padding"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:background="@drawable/icon_selector"
+                android:src="@drawable/favicon"/>
+
+        <TextView
+                android:id="@+id/title_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/title_size"
+                android:textColor="@color/silver"
+                android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_marginTop="@dimen/title_bar_height"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!-- The main content view -->
+        <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        <!-- The navigation drawer -->
+        <include layout="@layout/menu_layout"/>
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

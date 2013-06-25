@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+    <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/show_image"
+            android:layout_width="@dimen/poster_width"
+            android:layout_height="@dimen/poster_height"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/list_item_padding"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <TextView
+            android:id="@+id/date_created"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/list_item_padding"
+            android:textIsSelectable="false"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/show_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/show_image"
+            android:layout_toLeftOf="@id/date_created"
+            android:padding="@dimen/list_item_padding"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textIsSelectable="false"
+            android:textStyle="bold"/>
+
+    <ImageView
+            android:id="@+id/watched_icon"
+            android:layout_toRightOf="@id/show_image"
+            android:layout_below="@id/show_title"
+            android:layout_width="@dimen/tick_size"
+            android:layout_height="@dimen/tick_size"
+            android:src="@drawable/tick_icon"
+            android:visibility="gone"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <TextView
+            android:id="@+id/watched_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/watched_icon"
+            android:layout_below="@id/show_title"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textColor="@color/grey"
+            android:textIsSelectable="false"
+            android:textStyle="italic"
+            android:text="@string/watched_string"
+            android:visibility="gone"/>
+
+    <ImageView
+            android:id="@+id/fav_image"
+            android:layout_toRightOf="@id/watched_text"
+            android:layout_below="@id/show_title"
+            android:layout_width="@dimen/favorite_size"
+            android:layout_height="@dimen/favorite_size"
+            android:visibility="invisible"
+            android:src="@drawable/favorite_icon"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <ImageView
+            android:id="@+id/star_image_1"
+            android:layout_toRightOf="@id/show_image"
+            android:layout_below="@id/watched_icon"
+            android:layout_width="@dimen/stars_size"
+            android:layout_height="@dimen/stars_size"
+            android:visibility="invisible"
+            android:src="@drawable/star"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <ImageView
+            android:id="@+id/star_image_2"
+            android:layout_toRightOf="@id/star_image_1"
+            android:layout_below="@id/watched_icon"
+            android:layout_width="@dimen/stars_size"
+            android:layout_height="@dimen/stars_size"
+            android:visibility="invisible"
+            android:src="@drawable/star"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <ImageView
+            android:id="@+id/star_image_3"
+            android:layout_toRightOf="@id/star_image_2"
+            android:layout_below="@id/watched_icon"
+            android:layout_width="@dimen/stars_size"
+            android:layout_height="@dimen/stars_size"
+            android:visibility="invisible"
+            android:src="@drawable/star"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <ImageView
+            android:id="@+id/star_image_4"
+            android:layout_toRightOf="@id/star_image_3"
+            android:layout_below="@id/watched_icon"
+            android:layout_width="@dimen/stars_size"
+            android:layout_height="@dimen/stars_size"
+            android:visibility="invisible"
+            android:src="@drawable/star"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <ImageView
+            android:id="@+id/star_image_5"
+            android:layout_toRightOf="@id/star_image_4"
+            android:layout_below="@id/watched_icon"
+            android:layout_width="@dimen/stars_size"
+            android:layout_height="@dimen/stars_size"
+            android:visibility="invisible"
+            android:src="@drawable/star"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/user_image"
+            android:layout_toRightOf="@id/show_image"
+            android:layout_below="@id/star_image_1"
+            android:layout_width="@dimen/avatar_image_size"
+            android:layout_height="@dimen/avatar_image_size"
+            android:padding="@dimen/list_item_padding"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            />
+
+    <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_image"
+            android:layout_toRightOf="@id/user_image"
+            android:paddingBottom="@dimen/list_item_padding"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            android:textStyle="bold"/>
+
+</RelativeLayout>

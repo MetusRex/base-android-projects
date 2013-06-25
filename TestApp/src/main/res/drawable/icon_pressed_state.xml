@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="oval" >
+    <solid android:color="#ffff70ea" />
+
+    <size
+            android:width="@dimen/title_bar_height"
+            android:height="@dimen/title_bar_height"/>
+</shape>
